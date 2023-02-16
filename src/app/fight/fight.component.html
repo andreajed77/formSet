@@ -1,0 +1,61 @@
+<form [formGroup]="form">
+<mat-form-field appearance="fill">
+  <mat-label>Select Hero</mat-label>
+  <mat-select formControlName="hero1" [compareWith]="compareFn">
+    <mat-option *ngFor="let hero of heroes1" [value]="hero">
+      {{hero.name}}
+    </mat-option>
+  </mat-select>
+
+
+
+
+
+  <div>
+  <mat-card *ngFor="let hero of arrayEsclusi" >
+    {{hero.name}}
+  </mat-card>
+  </div>
+</mat-form-field>
+
+
+<mat-form-field appearance="fill">
+  <mat-label>Select hero</mat-label>
+  <mat-select formControlName="hero2" [compareWith]="compareFn">
+    <mat-option  *ngFor="let heros of heroes2" [value]="heros">
+      {{heros.name}}
+    </mat-option>
+  </mat-select>
+  <mat-card *ngFor="let hero of arrayEsclusi" >
+    {{hero.name}}
+  </mat-card>
+</mat-form-field>
+
+
+
+<mat-card>
+  <mat-card-content>
+    <button mat-button color="warn" (click)="fight()">Fight!</button>
+  </mat-card-content>
+</mat-card>
+
+
+
+<mat-card style="margin-top:40px">
+  <mat-card-content>
+   {{result}}
+  </mat-card-content>
+</mat-card>
+
+
+
+  </form>
+
+
+
+
+
+
+
+
+

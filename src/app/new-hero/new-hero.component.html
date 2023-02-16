@@ -1,0 +1,25 @@
+<div style="margin-left:40px">
+  <div style="margin-top:40px">
+<form class="example-form" [formGroup]="form">
+  <div>
+    <td><mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>id</mat-label>
+      <input type="text" pattern="[0-9]*" pattern="\d{1,1}"
+      matInput formControlName="id" matInput placeholder="(max 9)">
+    </mat-form-field></td>
+
+
+    <td><mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>name</mat-label>
+      <input type="text" matInput formControlName="name" required matInput>
+    </mat-form-field></td>
+
+    <td><mat-form-field class="example-full-width">
+      <mat-label>strenght</mat-label>
+      <input type="text" pattern="[0-999]*" pattern="\d{3,3}" required matInput
+      formControlName="strenght" placeholder="3 Digits Required">
+    </mat-form-field></td>
+    <button mat-raised-button color="warn"  style="margin-right:30px"
+    type="submit" [disabled]="!form.valid" (click)="savedata()">Save Hero</button>
+  </div>
+

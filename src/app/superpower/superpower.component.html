@@ -1,0 +1,23 @@
+
+  <div style="margin-left:40px">
+    <div style="margin-top:40px">
+
+    <form class="example-form" [formGroup]="form">
+      <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>id</mat-label>
+        <input type="text" matInput formControlName="id">
+      </mat-form-field></td>
+
+
+      <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>name</mat-label>
+        <input type="text" matInput formControlName="name" >
+      </mat-form-field></td>
+
+      <td><mat-form-field class="example-full-width">
+        <mat-label>strenght</mat-label>
+        <input type="text" pattern="[0-999]*" pattern="\d{3,3}" matInput
+        formControlName="strenght" placeholder="3 Digits Required">
+      </mat-form-field></td>
+      <button mat-raised-button color="warn" (click)="clear()">Clear</button>
+
